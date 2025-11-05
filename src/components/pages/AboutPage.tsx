@@ -30,22 +30,22 @@ export function AboutPage() {
 
   const team = [
     {
-      name: 'Tarun Shankar Muragodnavar',
+      name: 'Kethan P Shetty',
       role: 'Lead Developer',
       image: 'https://ui-avatars.com/api/?name=Tarun+Shankar&background=2E8B57&color=fff&size=200',
     },
     {
-      name: 'Sai Krishna S',
+      name: 'Druva D Vijaya',
       role: 'Blockchain Architect',
       image: 'https://ui-avatars.com/api/?name=Sai+Krishna&background=2E8B57&color=fff&size=200',
     },
     {
-      name: 'T P Manvitha',
+      name: 'Chirag G S',
       role: 'AI/ML Engineer',
       image: 'https://ui-avatars.com/api/?name=T+P+Manvitha&background=2E8B57&color=fff&size=200',
     },
     {
-      name: 'Vaibhav J P',
+      name: 'K Chandan Jayasimha',
       role: 'Full Stack Developer',
       image: 'https://ui-avatars.com/api/?name=Vaibhav+J+P&background=2E8B57&color=fff&size=200',
     },
@@ -217,7 +217,7 @@ export function AboutPage() {
             <div className="text-center">
               <p className="text-[#1B1B1B]/70 mb-2">Under the guidance of</p>
               <h3 className="text-[#1B1B1B]" style={{ fontSize: '1.5rem', fontWeight: 600 }}>
-                Dr. Ramu S
+                Dr. K G Manjunath
               </h3>
               <p className="text-[#2E8B57]">Faculty Advisor</p>
               <p className="text-[#1B1B1B]/60 mt-2" style={{ fontSize: '0.875rem' }}>
