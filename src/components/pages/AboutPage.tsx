@@ -1,8 +1,13 @@
 import { motion } from 'motion/react';
-import { Target, Eye, Award, Users } from 'lucide-react';
+import { Target, Eye, Award, Users, Github, Linkedin } from 'lucide-react';
 import { Card } from '../ui/card';
 import { Avatar } from '../ui/avatar';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
+import { teamMembers } from '../../data/team';
+import chandanImg from '../../assets/chandan.png';
+import druvaImg from '../../assets/druva.png';
+import chiragImg from '../../assets/chirag.png';
+import kethanImg from '../../assets/kethan.png';
 
 export function AboutPage() {
   const objectives = [
@@ -28,28 +33,7 @@ export function AboutPage() {
     },
   ];
 
-  const team = [
-    {
-      name: 'Kethan P Shetty',
-      role: 'Lead Developer',
-      image: 'https://ui-avatars.com/api/?name=Tarun+Shankar&background=2E8B57&color=fff&size=200',
-    },
-    {
-      name: 'Druva D Vijaya',
-      role: 'Blockchain Architect',
-      image: 'https://ui-avatars.com/api/?name=Sai+Krishna&background=2E8B57&color=fff&size=200',
-    },
-    {
-      name: 'Chirag G S',
-      role: 'AI/ML Engineer',
-      image: 'https://ui-avatars.com/api/?name=T+P+Manvitha&background=2E8B57&color=fff&size=200',
-    },
-    {
-      name: 'K Chandan Jayasimha',
-      role: 'Full Stack Developer',
-      image: 'https://ui-avatars.com/api/?name=Vaibhav+J+P&background=2E8B57&color=fff&size=200',
-    },
-  ];
+  const team = teamMembers;
 
   return (
     <div className="min-h-screen pt-20">
@@ -196,18 +180,36 @@ export function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <Card className="p-6 hover:shadow-lg transition-all border-[#2E8B57]/20 hover:border-[#2E8B57]">
-                  <div className="mb-4">
+                <Card className="p-6 hover:shadow-lg transition-all border-[#2E8B57]/20 hover:border-[#2E8B57] group">
+                  <div className="mb-4 relative">
                     <ImageWithFallback
                       src={member.image}
                       alt={member.name}
-                      className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-[#2E8B57]/20"
+                      className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-[#2E8B57]/20 transition-transform group-hover:scale-105"
                     />
                   </div>
-                  <h3 className="mb-1 text-[#1B1B1B]">{member.name}</h3>
-                  <p className="text-[#2E8B57]" style={{ fontSize: '0.875rem' }}>
+                  <h3 className="mb-1 text-[#1B1B1B] font-semibold">{member.name}</h3>
+                  <p className="text-[#2E8B57] mb-3" style={{ fontSize: '0.875rem' }}>
                     {member.role}
                   </p>
+                  <div className="flex justify-center gap-4 opacity-70 hover:opacity-100 transition-opacity">
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-[#2E8B57] transition-colors"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-[#2E8B57] transition-colors"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                  </div>
                 </Card>
               </motion.div>
             ))}
