@@ -9,8 +9,9 @@ export const teamMembers = [
     name: 'Kethan P Shetty',
     role: 'Lead Developer',
     image: kethanImg,
-    github: 'linkedin.com/in/kethan-shetty-a43b14206',
-    linkedin: 'https://linkedin.com/in/kethanpshetty'
+    github: 'https://github.com/Kethan-shetty'
+,
+    linkedin: 'https://www.linkedin.com/in/kethan-shetty-a43b14206?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   },
   {
     name: 'Druva D Vijaya',
